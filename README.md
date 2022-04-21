@@ -4,17 +4,17 @@
 
 ### Docker build
 
-```docker build -t javabreakimage .```
+```docker build -t javabreak /path/to/local/codebase```
 
 ### Docker launch
 
-```docker run -d --name javabreakcontainer -p 80:80 javabreakimage```
+```docker run -d --name javabreak -p 80:80 javabreak```
 
 ## Development
 
 ### Install requirements
 
-```pip install -r requirements.txt```
+```pip install --no-cache-dir --upgrade -r requirements.txt```
 
 ### Uvicorn launch
 
@@ -22,4 +22,8 @@
 
 ## Run linters locally
 
+```docker pull github/super-linter:latest```
+
 ```docker run -e RUN_LOCAL=true -v /path/to/local/codebase:/tmp/lint github/super-linter```
+
+```docker run -e RUN_LOCAL=true -v /path/to/local/codebase/file:/tmp/lint/file github/super-linter```
