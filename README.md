@@ -16,11 +16,15 @@
 
 ```pip install --no-cache-dir --upgrade -r requirements.txt```
 
+### Code generation
+
+```fastapi-codegen -i FILENAME -o PATH```
+
 ### Uvicorn launch
 
 ```uvicorn back.main:app --reload --host 0.0.0.0 --port 80```
 
-## Run linters locally
+### Run linters locally
 
 ```docker pull github/super-linter:latest```
 
