@@ -18,7 +18,7 @@
 
 ### Code generation
 
-```fastapi-codegen -i FILENAME -o PATH```
+```fastapi-codegen -i FILENAME -o PATH -t PATH```
 
 ### Uvicorn launch
 
