@@ -1,26 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { YMaps, Map } from 'react-yandex-maps';
 
-function App() {
-  return (
-    <div className="app">
-      <header className="app-header">
-        <img src={logo} className="app-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="app-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+  <YMaps>
+    <div>
+      <Map defaultState={{ center: [55.75, 37.62], zoom: 10 }}
+        width="99vw"
+        height="66vh" />
     </div>
-  );
-}
+  </YMaps>
+);
 
 export default App;
